@@ -6,6 +6,8 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Montserrat&weight=700&pause=1000&color=F7DF1E&center=true&vCenter=true&width=900&lines=B.Tech+AI+%26+Data+Science+Student;St.Joseph%27s+Institute+Of+Technology;AI+%2F+ML+Enthusiast;Always+Building+Something+Cool" alt="Typing SVG" />
 </div>
 
+
+
 # 💫 About Me:
 🎓 B.Tech – Artificial Intelligence & Data Science<br>💻 Tech enthusiast focused on building scalable, efficient, and intelligent solutions<br>🤖 Hands-on experience with AI, Machine Learning, and Data Science projects<br>🌐 Interested in full-stack development and system-level problem solving<br>📊 Love working with data, analytics, and visual insights<br>🚀 Always learning, always building
 
