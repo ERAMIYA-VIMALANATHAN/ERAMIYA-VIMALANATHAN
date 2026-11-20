@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 20" width="800" height="20">
+  <style>
+    @keyframes pulse1 { 0%,100% { opacity:0.3; } 50% { opacity:1; } }
+    @keyframes pulse2 { 0%,100% { opacity:0.2; } 50% { opacity:0.8; } }
+    .p1 { animation: pulse1 2s ease-in-out infinite; }
+    .p2 { animation: pulse1 2s ease-in-out infinite 0.2s; }
+    .p3 { animation: pulse1 2s ease-in-out infinite 0.4s; }
+    .p4 { animation: pulse1 2s ease-in-out infinite 0.6s; }
+    .p5 { animation: pulse1 2s ease-in-out infinite 0.8s; }
+    .p6 { animation: pulse1 2s ease-in-out infinite 1.0s; }
+    .p7 { animation: pulse1 2s ease-in-out infinite 1.2s; }
+    .p8 { animation: pulse1 2s ease-in-out infinite 1.4s; }
+    .bg { animation: pulse2 3s ease-in-out infinite; }
+  </style>
+
+  <!-- Center line -->
+  <rect class="bg" x="50" y="9" width="700" height="2" fill="#1a1a2e" opacity="0.3"/>
+
+  <!-- Left pixel pattern -->
+  <rect class="p1" x="50" y="6" width="4" height="8" fill="#00ffff"/>
+  <rect class="p2" x="60" y="7" width="4" height="6" fill="#00d4ff"/>
+  <rect class="p3" x="70" y="8" width="4" height="4" fill="#00aaff"/>
+  <rect class="p1" x="80" y="9" width="4" height="2" fill="#0088ff"/>
+
+  <!-- Center diamond -->
+  <rect class="p4" x="396" y="4" width="4" height="4" fill="#ff00ff"/>
+  <rect class="p5" x="392" y="8" width="4" height="4" fill="#ff00ff"/>
+  <rect class="p5" x="400" y="8" width="4" height="4" fill="#ff00ff"/>
+  <rect class="p4" x="396" y="12" width="4" height="4" fill="#ff00ff"/>
+
+  <!-- Scattered pixels -->
+  <rect class="p2" x="200" y="8" width="3" height="3" fill="#00ff41"/>
+  <rect class="p4" x="300" y="7" width="3" height="3" fill="#b14aed"/>
+  <rect class="p6" x="500" y="8" width="3" height="3" fill="#00ffff"/>
+  <rect class="p8" x="600" y="7" width="3" height="3" fill="#ff0080"/>
+
+  <!-- Right pixel pattern -->
+  <rect class="p8" x="746" y="6" width="4" height="8" fill="#ff00ff"/>
+  <rect class="p7" x="736" y="7" width="4" height="6" fill="#dd00dd"/>
+  <rect class="p6" x="726" y="8" width="4" height="4" fill="#bb00bb"/>
+  <rect class="p5" x="716" y="9" width="4" height="2" fill="#9900aa"/>
+
+  <!-- Connecting dots -->
+  <rect class="p3" x="120" y="9" width="2" height="2" fill="#00ffff" opacity="0.5"/>
+  <rect class="p5" x="160" y="9" width="2" height="2" fill="#00ffff" opacity="0.4"/>
+  <rect class="p7" x="240" y="9" width="2" height="2" fill="#ff00ff" opacity="0.4"/>
+  <rect class="p2" x="340" y="9" width="2" height="2" fill="#00ff41" opacity="0.5"/>
+  <rect class="p4" x="440" y="9" width="2" height="2" fill="#b14aed" opacity="0.5"/>
+  <rect class="p6" x="540" y="9" width="2" height="2" fill="#ff00ff" opacity="0.4"/>
+  <rect class="p8" x="640" y="9" width="2" height="2" fill="#00ffff" opacity="0.4"/>
+  <rect class="p1" x="680" y="9" width="2" height="2" fill="#ff0080" opacity="0.5"/>
+</svg>

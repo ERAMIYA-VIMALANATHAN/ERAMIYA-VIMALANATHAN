@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 280" width="840" height="280">
+  <defs>
+    <filter id="neonGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff00ff" stop-opacity="0.8"/>
+      <stop offset="25%" stop-color="#00ffff" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#ff00ff" stop-opacity="0.8"/>
+      <stop offset="75%" stop-color="#00ff41" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ff00ff" stop-opacity="0.8"/>
+      <animate attributeName="x1" values="0%;100%;0%" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="100%;200%;100%" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ffff"/>
+      <stop offset="30%" stop-color="#ff00ff"/>
+      <stop offset="60%" stop-color="#00ff41"/>
+      <stop offset="100%" stop-color="#00ffff"/>
+      <animate attributeName="x1" values="0%;-100%;0%" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="100%;0%;100%" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="subtitleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b14aed"/>
+      <stop offset="50%" stop-color="#00f7ff"/>
+      <stop offset="100%" stop-color="#b14aed"/>
+      <animate attributeName="x1" values="0%;-50%;0%" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="100%;50%;100%" dur="4s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes scanline {
+      0% { transform: translateY(-20px); opacity: 0; }
+      10% { opacity: 0.15; }
+      90% { opacity: 0.15; }
+      100% { transform: translateY(280px); opacity: 0; }
+    }
+    @keyframes twinkle1 {
+      0%, 100% { opacity: 0; transform: scale(0); }
+      50% { opacity: 1; transform: scale(1); }
+    }
+    @keyframes twinkle2 {
+      0%, 100% { opacity: 0; transform: scale(0); }
+      40% { opacity: 0.8; transform: scale(1.2); }
+      60% { opacity: 1; transform: scale(0.8); }
+    }
+    @keyframes pixelRain {
+      0% { transform: translateY(-10px); opacity: 0; }
+      20% { opacity: 0.6; }
+      80% { opacity: 0.4; }
+      100% { transform: translateY(290px); opacity: 0; }
+    }
+    @keyframes borderPulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+    @keyframes cornerGlow {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+    #scanbar { animation: scanline 4s linear infinite; }
+    .star1 { animation: twinkle1 2.5s ease-in-out infinite; }
+    .star2 { animation: twinkle2 3s ease-in-out infinite; }
+    .star3 { animation: twinkle1 2s ease-in-out infinite; }
+    .star4 { animation: twinkle2 3.5s ease-in-out infinite; }
+    .star5 { animation: twinkle1 1.8s ease-in-out infinite; }
+    .star6 { animation: twinkle2 2.2s ease-in-out infinite; }
+    .star7 { animation: twinkle1 2.8s ease-in-out infinite; }
+    .star8 { animation: twinkle2 1.5s ease-in-out infinite; }
+    .pxrain1 { animation: pixelRain 3s linear infinite; }
+    .pxrain2 { animation: pixelRain 4s linear infinite 1s; }
+    .pxrain3 { animation: pixelRain 3.5s linear infinite 0.5s; }
+    .pxrain4 { animation: pixelRain 2.8s linear infinite 1.5s; }
+    .pxrain5 { animation: pixelRain 3.2s linear infinite 2s; }
+    .border-glow { animation: borderPulse 3s ease-in-out infinite; }
+    .corner { animation: cornerGlow 2s ease-in-out infinite; }
+  </style>
+
+  <!-- Dark background -->
+  <rect width="840" height="280" fill="#0a0a14" rx="12"/>
+
+  <!-- Pixel border frame -->
+  <g class="border-glow">
+    <!-- Top border pixels -->
+    <rect x="8" y="4" width="824" height="3" fill="url(#borderGrad)" opacity="0.7"/>
+    <!-- Bottom border pixels -->
+    <rect x="8" y="273" width="824" height="3" fill="url(#borderGrad)" opacity="0.7"/>
+    <!-- Left border pixels -->
+    <rect x="4" y="8" width="3" height="264" fill="url(#borderGrad)" opacity="0.7"/>
+    <!-- Right border pixels -->
+    <rect x="833" y="8" width="3" height="264" fill="url(#borderGrad)" opacity="0.7"/>
+  </g>
+
+  <!-- Corner accents (pixel style) -->
+  <g class="corner" filter="url(#softGlow)">
+    <!-- Top-left -->
+    <rect x="4" y="4" width="8" height="3" fill="#00ffff"/>
+    <rect x="4" y="4" width="3" height="8" fill="#00ffff"/>
+    <!-- Top-right -->
+    <rect x="828" y="4" width="8" height="3" fill="#ff00ff"/>
+    <rect x="833" y="4" width="3" height="8" fill="#ff00ff"/>
+    <!-- Bottom-left -->
+    <rect x="4" y="273" width="8" height="3" fill="#00ff41"/>
+    <rect x="4" y="269" width="3" height="8" fill="#00ff41"/>
+    <!-- Bottom-right -->
+    <rect x="828" y="273" width="8" height="3" fill="#ff0080"/>
+    <rect x="833" y="269" width="3" height="8" fill="#ff0080"/>
+  </g>
+
+  <!-- Scanline effect -->
+  <rect id="scanbar" x="8" y="0" width="824" height="2" fill="#00ffff" opacity="0"/>
+
+  <!-- Pixel rain particles -->
+  <rect class="pxrain1" x="120" y="0" width="2" height="6" fill="#00ffff" opacity="0"/>
+  <rect class="pxrain2" x="300" y="0" width="2" height="4" fill="#ff00ff" opacity="0"/>
+  <rect class="pxrain3" x="520" y="0" width="2" height="5" fill="#00ff41" opacity="0"/>
+  <rect class="pxrain4" x="680" y="0" width="2" height="4" fill="#b14aed" opacity="0"/>
+  <rect class="pxrain5" x="200" y="0" width="2" height="6" fill="#ff0080" opacity="0"/>
+  <rect class="pxrain1" x="450" y="0" width="2" height="4" fill="#00ffff" opacity="0"/>
+  <rect class="pxrain3" x="750" y="0" width="2" height="5" fill="#ff00ff" opacity="0"/>
+  <rect class="pxrain4" x="60" y="0" width="2" height="3" fill="#00ff41" opacity="0"/>
+
+  <!-- Twinkling pixel stars -->
+  <g filter="url(#softGlow)">
+    <rect class="star1" x="100" y="40" width="4" height="4" fill="#00ffff"/>
+    <rect class="star2" x="250" y="60" width="3" height="3" fill="#ff00ff"/>
+    <rect class="star3" x="650" y="35" width="4" height="4" fill="#00ff41"/>
+    <rect class="star4" x="750" y="65" width="3" height="3" fill="#ff0080"/>
+    <rect class="star5" x="180" y="220" width="3" height="3" fill="#b14aed"/>
+    <rect class="star6" x="400" y="245" width="4" height="4" fill="#00ffff"/>
+    <rect class="star7" x="580" y="230" width="3" height="3" fill="#ff00ff"/>
+    <rect class="star8" x="720" y="210" width="4" height="4" fill="#00ff41"/>
+    <rect class="star1" x="50" y="140" width="3" height="3" fill="#ff0080"/>
+    <rect class="star3" x="790" y="140" width="3" height="3" fill="#00ffff"/>
+  </g>
+
+  <!-- Grid overlay (subtle) -->
+  <g opacity="0.03">
+    <line x1="0" y1="70" x2="840" y2="70" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="140" x2="840" y2="140" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="210" x2="840" y2="210" stroke="#fff" stroke-width="0.5"/>
+    <line x1="210" y1="0" x2="210" y2="280" stroke="#fff" stroke-width="0.5"/>
+    <line x1="420" y1="0" x2="420" y2="280" stroke="#fff" stroke-width="0.5"/>
+    <line x1="630" y1="0" x2="630" y2="280" stroke="#fff" stroke-width="0.5"/>
+  </g>
+
+  <!-- Decorative pixel art corners -->
+  <!-- Top-left pixel cluster -->
+  <g opacity="0.15">
+    <rect x="20" y="20" width="4" height="4" fill="#00ffff"/>
+    <rect x="28" y="20" width="4" height="4" fill="#00ffff"/>
+    <rect x="20" y="28" width="4" height="4" fill="#00ffff"/>
+    <rect x="36" y="20" width="4" height="4" fill="#00ffff"/>
+    <rect x="20" y="36" width="4" height="4" fill="#00ffff"/>
+  </g>
+  <!-- Top-right pixel cluster -->
+  <g opacity="0.15">
+    <rect x="812" y="20" width="4" height="4" fill="#ff00ff"/>
+    <rect x="804" y="20" width="4" height="4" fill="#ff00ff"/>
+    <rect x="812" y="28" width="4" height="4" fill="#ff00ff"/>
+    <rect x="796" y="20" width="4" height="4" fill="#ff00ff"/>
+    <rect x="812" y="36" width="4" height="4" fill="#ff00ff"/>
+  </g>
+
+  <!-- MAIN TITLE -->
+  <text x="420" y="105" font-family="'Courier New', monospace" font-size="42" font-weight="bold" fill="url(#titleGrad)" text-anchor="middle" filter="url(#neonGlow)" letter-spacing="3">
+    ERAMIYA VIMALANTHAN
+  </text>
+
+  <!-- Pixel underline decoration -->
+  <g opacity="0.5">
+    <rect x="160" y="118" width="520" height="2" fill="url(#borderGrad)"/>
+    <rect x="170" y="122" width="500" height="1" fill="url(#borderGrad)" opacity="0.5"/>
+  </g>
+
+  <!-- SUBTITLE -->
+  <text x="420" y="155" font-family="'Courier New', monospace" font-size="16" fill="url(#subtitleGrad)" text-anchor="middle" letter-spacing="2" filter="url(#softGlow)">
+    AI &amp; DATA SCIENCE  |  FULL STACK DEV  |  HACKATHON WINNER
+  </text>
+
+  <!-- Pixel art role badges -->
+  <g transform="translate(420, 185)" text-anchor="middle">
+    <!-- Badge 1 -->
+    <rect x="-200" y="0" width="120" height="24" rx="2" fill="#0d1117" stroke="#00ffff" stroke-width="1" opacity="0.8"/>
+    <text x="-140" y="16" font-family="'Courier New', monospace" font-size="10" fill="#00ffff" text-anchor="middle">B.TECH AIDS</text>
+    <!-- Badge 2 -->
+    <rect x="-60" y="0" width="120" height="24" rx="2" fill="#0d1117" stroke="#ff00ff" stroke-width="1" opacity="0.8"/>
+    <text x="0" y="16" font-family="'Courier New', monospace" font-size="10" fill="#ff00ff" text-anchor="middle">ML ENGINEER</text>
+    <!-- Badge 3 -->
+    <rect x="80" y="0" width="120" height="24" rx="2" fill="#0d1117" stroke="#00ff41" stroke-width="1" opacity="0.8"/>
+    <text x="140" y="16" font-family="'Courier New', monospace" font-size="10" fill="#00ff41" text-anchor="middle">CREATIVE DEV</text>
+  </g>
+
+  <!-- Bottom decoration - pixel wave -->
+  <g opacity="0.2">
+    <rect x="100" y="240" width="4" height="4" fill="#00ffff"/>
+    <rect x="108" y="244" width="4" height="4" fill="#00ffff"/>
+    <rect x="116" y="248" width="4" height="4" fill="#ff00ff"/>
+    <rect x="124" y="244" width="4" height="4" fill="#ff00ff"/>
+    <rect x="132" y="240" width="4" height="4" fill="#00ff41"/>
+    <rect x="140" y="244" width="4" height="4" fill="#00ff41"/>
+    <rect x="148" y="248" width="4" height="4" fill="#b14aed"/>
+    <rect x="156" y="244" width="4" height="4" fill="#b14aed"/>
+
+    <rect x="680" y="240" width="4" height="4" fill="#ff00ff"/>
+    <rect x="688" y="244" width="4" height="4" fill="#ff00ff"/>
+    <rect x="696" y="248" width="4" height="4" fill="#00ffff"/>
+    <rect x="704" y="244" width="4" height="4" fill="#00ffff"/>
+    <rect x="712" y="240" width="4" height="4" fill="#00ff41"/>
+    <rect x="720" y="244" width="4" height="4" fill="#00ff41"/>
+    <rect x="728" y="248" width="4" height="4" fill="#ff0080"/>
+    <rect x="736" y="244" width="4" height="4" fill="#ff0080"/>
+  </g>
+
+  <!-- Loading bar pixel decoration at bottom -->
+  <g opacity="0.3">
+    <rect x="350" y="250" width="8" height="4" fill="#00ffff">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="362" y="250" width="8" height="4" fill="#ff00ff">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="0.15s"/>
+    </rect>
+    <rect x="374" y="250" width="8" height="4" fill="#00ff41">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="0.3s"/>
+    </rect>
+    <rect x="386" y="250" width="8" height="4" fill="#b14aed">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="0.45s"/>
+    </rect>
+    <rect x="398" y="250" width="8" height="4" fill="#ff0080">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="0.6s"/>
+    </rect>
+    <rect x="410" y="250" width="8" height="4" fill="#00ffff">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="0.75s"/>
+    </rect>
+    <rect x="422" y="250" width="8" height="4" fill="#ff00ff">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="0.9s"/>
+    </rect>
+    <rect x="434" y="250" width="8" height="4" fill="#00ff41">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="1.05s"/>
+    </rect>
+    <rect x="446" y="250" width="8" height="4" fill="#b14aed">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="1.2s"/>
+    </rect>
+    <rect x="458" y="250" width="8" height="4" fill="#ff0080">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="1.35s"/>
+    </rect>
+    <rect x="470" y="250" width="8" height="4" fill="#00ffff">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="1.5s"/>
+    </rect>
+  </g>
+</svg>

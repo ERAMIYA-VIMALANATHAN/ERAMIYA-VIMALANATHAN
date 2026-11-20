@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 120" width="840" height="120">
+  <defs>
+    <linearGradient id="fg1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ff00ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00ffff" stop-opacity="0"/>
+      <animate attributeName="x1" values="-100%;100%;-100%" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0%;200%;0%" dur="4s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+  <style>
+    @keyframes wave {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+    .w1 { animation: wave 2s ease-in-out infinite; }
+    .w2 { animation: wave 2s ease-in-out infinite 0.1s; }
+    .w3 { animation: wave 2s ease-in-out infinite 0.2s; }
+    .w4 { animation: wave 2s ease-in-out infinite 0.3s; }
+    .w5 { animation: wave 2s ease-in-out infinite 0.4s; }
+    .w6 { animation: wave 2s ease-in-out infinite 0.5s; }
+    .w7 { animation: wave 2s ease-in-out infinite 0.6s; }
+    .w8 { animation: wave 2s ease-in-out infinite 0.7s; }
+    .msgFade { animation: fadeInOut 3s ease-in-out infinite; }
+  </style>
+
+  <rect width="840" height="120" fill="#0a0a14" rx="12"/>
+
+  <!-- Pixel border top -->
+  <rect x="8" y="4" width="824" height="2" fill="url(#fg1)" opacity="0.6"/>
+
+  <!-- Pixel wave decoration -->
+  <g transform="translate(0, 30)">
+    <rect class="w1" x="100" y="0" width="6" height="6" fill="#00ffff" opacity="0.6"/>
+    <rect class="w2" x="140" y="0" width="6" height="8" fill="#00d4ff" opacity="0.5"/>
+    <rect class="w3" x="180" y="0" width="6" height="10" fill="#00aaff" opacity="0.6"/>
+    <rect class="w4" x="220" y="0" width="6" height="12" fill="#ff00ff" opacity="0.5"/>
+    <rect class="w5" x="260" y="0" width="6" height="14" fill="#dd00dd" opacity="0.6"/>
+    <rect class="w6" x="300" y="0" width="6" height="12" fill="#00ff41" opacity="0.5"/>
+    <rect class="w7" x="340" y="0" width="6" height="10" fill="#00dd30" opacity="0.6"/>
+    <rect class="w8" x="380" y="0" width="6" height="8" fill="#b14aed" opacity="0.5"/>
+    <rect class="w1" x="420" y="0" width="6" height="6" fill="#ff0080" opacity="0.6"/>
+    <rect class="w2" x="460" y="0" width="6" height="8" fill="#00ffff" opacity="0.5"/>
+    <rect class="w3" x="500" y="0" width="6" height="10" fill="#ff00ff" opacity="0.6"/>
+    <rect class="w4" x="540" y="0" width="6" height="12" fill="#00ff41" opacity="0.5"/>
+    <rect class="w5" x="580" y="0" width="6" height="14" fill="#b14aed" opacity="0.6"/>
+    <rect class="w6" x="620" y="0" width="6" height="12" fill="#00ffff" opacity="0.5"/>
+    <rect class="w7" x="660" y="0" width="6" height="10" fill="#ff00ff" opacity="0.6"/>
+    <rect class="w8" x="700" y="0" width="6" height="8" fill="#00ff41" opacity="0.5"/>
+  </g>
+
+  <!-- Game over text (pixel style) -->
+  <text class="msgFade" x="420" y="80" font-family="'Courier New', monospace" font-size="14" fill="#666" text-anchor="middle" letter-spacing="4">
+    THANKS FOR VISITING  ///  PLAYER 2 PRESS START
+  </text>
+
+  <!-- Pixel art hearts -->
+  <g transform="translate(310, 92)" opacity="0.5">
+    <rect x="0" y="0" width="3" height="3" fill="#ff0080"/>
+    <rect x="6" y="0" width="3" height="3" fill="#ff0080"/>
+    <rect x="-1" y="3" width="5" height="3" fill="#ff0080"/>
+    <rect x="5" y="3" width="5" height="3" fill="#ff0080"/>
+    <rect x="0" y="6" width="9" height="3" fill="#ff0080"/>
+    <rect x="1" y="9" width="7" height="3" fill="#ff0080"/>
+    <rect x="3" y="12" width="3" height="2" fill="#ff0080"/>
+  </g>
+  <g transform="translate(510, 92)" opacity="0.5">
+    <rect x="0" y="0" width="3" height="3" fill="#ff0080"/>
+    <rect x="6" y="0" width="3" height="3" fill="#ff0080"/>
+    <rect x="-1" y="3" width="5" height="3" fill="#ff0080"/>
+    <rect x="5" y="3" width="5" height="3" fill="#ff0080"/>
+    <rect x="0" y="6" width="9" height="3" fill="#ff0080"/>
+    <rect x="1" y="9" width="7" height="3" fill="#ff0080"/>
+    <rect x="3" y="12" width="3" height="2" fill="#ff0080"/>
+  </g>
+
+  <!-- Pixel border bottom -->
+  <rect x="8" y="114" width="824" height="2" fill="url(#fg1)" opacity="0.6"/>
+</svg>
